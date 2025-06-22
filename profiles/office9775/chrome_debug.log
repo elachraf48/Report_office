@@ -1,0 +1,47 @@
+[16888:23824:0622/202905.427:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[16888:23824:0622/202905.893:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202905.895:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202906.012:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202906.139:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202906.228:INFO:CONSOLE:7] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: https://res.public.onecdn.static.microsoft/owamail/hashed-v1/scripts/owa.94868.m.211888ef.js (7)
+[16888:23824:0622/202906.231:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202906.966:INFO:CONSOLE:0] "An iframe which has both allow-scripts and allow-same-origin for its sandbox attribute can escape its sandboxing.", source: https://outlook.live.com/mail/oauthRedirect.html#error=login_required&error_description=Silent+authentication+was+denied.+The+user+must+first+sign+in+and+if+needed+grant+the+client+application+access+to+the+scope+'service::outlook.office.com::MBI_SSL+openid+profile+offline_access'.&state=eyJpZCI6IjAxOTc5OTFkLWE0YTktNzhmNy1iMWI0LWMwOTllNzllZjc5MyIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoic2lsZW50In19 (0)
+[16888:23824:0622/202906.966:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202908.700:INFO:CONSOLE:1] "undetected chromedriver 1337!", source:  (1)
+[16888:23824:0622/202909.364:INFO:CONSOLE:1] "1DS Initialized..", source: https://www.microsoft.com/etc.clientlibs/microsoft/components/structure/page/clientlibs/custom-oneds.ACSHASHc7126824fc792b8a6a54f7f58234f55f.min.js (1)
+[16888:23824:0622/202909.423:INFO:CONSOLE:141] "EmeEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://www.microsoft.com/videoplayer/ump.mjs (141)
+[16888:23824:0622/202909.423:INFO:CONSOLE:141] "McEncryptionSchemePolyfill: Waiting to detect encryptionScheme support.", source: https://www.microsoft.com/videoplayer/ump.mjs (141)
+[16888:23824:0622/202910.030:INFO:CONSOLE:13155] "MWF v2.8.1", source: https://www.microsoft.com/etc.clientlibs/onecloud/clientlibs/clientlib-mwf-new/main-light.ACSHASHfe9d5283cc0a38f995b64bf0f39192eb.min.js (13155)
+[16888:23824:0622/202910.147:INFO:CONSOLE:2613] "[OCR][ProductPricingManager] creation error:  Error: [OCR][ProductPricingManager] Invalid pricing component element. Missing data-ocr-pricing-identifier or data-ocr-sku-request attribute.", source: https://www.microsoft.com/etc.clientlibs/onecloud/clientlibs/clientlib-product-pricing.ACSHASH578ac15df4dff2a9f7a8250ae55ee3af.min.js (2613)
+[16888:23824:0622/202910.148:INFO:CONSOLE:2613] "[OCR][ProductPricingManager] creation error:  Error: [OCR][ProductPricingManager] Invalid pricing component element. Missing data-ocr-pricing-identifier or data-ocr-sku-request attribute.", source: https://www.microsoft.com/etc.clientlibs/onecloud/clientlibs/clientlib-product-pricing.ACSHASH578ac15df4dff2a9f7a8250ae55ee3af.min.js (2613)
+[16888:23824:0622/202910.189:INFO:CONSOLE:1] "sendToVortex Call", source: https://www.microsoft.com/etc.clientlibs/microsoft/clientlibs/exp-analytics/v1.ACSHASHbf7b336dbb370c984e1bf59b1a980d86.min.js (1)
+[16888:23824:0622/202910.262:INFO:CONSOLE:10] "Going to iterate over instancesSettings", source: https://assets.adobedtm.com/5ef092d1efb5/d6d76b37b476/launch-41185cd0b005.min.js (10)
+[16888:23824:0622/202910.267:INFO:CONSOLE:18] "_satellite typeof:object", source: https://assets.adobedtm.com/5ef092d1efb5/d6d76b37b476/launch-41185cd0b005.min.js (18)
+[16888:23824:0622/202910.267:INFO:CONSOLE:18] "_satellite2 typeof:undefined", source: https://assets.adobedtm.com/5ef092d1efb5/d6d76b37b476/launch-41185cd0b005.min.js (18)
+[16888:23824:0622/202910.291:INFO:CONSOLE:113] "Enter a_setSwipePayload", source:  (113)
+[16888:23824:0622/202910.414:INFO:CONSOLE:0] "[DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o", source: https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fm365.cloud.microsoft%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=638862157673401768.Nzg2YWJjNDYtOTg1YS00MmFhLWE3ZTYtNDJkMmIwOTA2OTUyNDZmMjhlN2QtZmVlNS00OWI3LThkOTctMTZkMmY4MjRiM2Iw&ui_locales=fr-FR&mkt=fr-FR&msafed=0&client-request-id=e26cfbfe-168b-443c-90fe-e5ffb59bff36&state=5UBZL67SyVP0EtFS8r5QV8Xe6ZYcQkbjaPRHTi28_TRZ_Aa554gSimEQVbcxaaHxFss4VuxJsS1DEgQEfA0rUSxJdYjJ_cWl3tz3vLhfFhw0XCW17bW1VAf0StnzSyW43tIOWDTiVi_oaml5ogBLCarwBjrMptRkPw1LQngwLJ7-EL0ivGdZGb2_lLWwNh54vQk0KQrKdX8wF0Myr1ZNwipyl0Y2EkbSwH9sDZIKZvtBValbC9UVyRYSW_igxc_RvpST0qquxMMJBCuX_LbW2rY2NC1i4zgZR3VI5JY7tJBLodOXggQiOawDpXwOBWO0vwFZQud8FQA9eg8DYXFxFsG7LU0DXWkGr0jCLAU3Mgc&x-client-SKU=ID_NET8_0&x-client-ver=8.5.0.0 (0)
+[16888:23824:0622/202910.464:INFO:CONSOLE:1250] "Site Consent Found Trigger Dispatched!", source:  (1250)
+[16888:23824:0622/202910.464:INFO:CONSOLE:87] "LCP Recorded Trigger Dispatched!", source:  (87)
+[16888:23824:0622/202910.464:INFO:CONSOLE:119] "LCP Element: [object HTMLImageElement]", source:  (119)
+[16888:23824:0622/202910.464:INFO:CONSOLE:120] "LCP Render Time: 2320", source:  (120)
+[16888:23824:0622/202910.464:INFO:CONSOLE:121] "LCP Size: 899132", source:  (121)
+[16888:23824:0622/202910.464:INFO:CONSOLE:1204] "Page Load Event End Trigger Dispatched!", source:  (1204)
+[16888:23824:0622/202910.470:INFO:CONSOLE:22] "pageView event: page.page_fr-fr_microsoft-365_outlook_email-and-calendar-software-microsoft-outlook", source: https://assets.adobedtm.com/5ef092d1efb5/d6d76b37b476/launch-41185cd0b005.min.js (22)
+[16888:23824:0622/202910.470:INFO:CONSOLE:3861] "Page View Trigger Event Dispatched!", source:  (3861)
+[16888:23824:0622/202910.622:INFO:CONSOLE:2] "KIF-9a6a4551-d7ca-492e-83b8-a679497175ba: Launcher Rule Fired", source:  (2)
+[16888:23824:0622/202910.641:INFO:CONSOLE:2] "KIF-472b86e4-85d2-424d-a035-610fe2345c81: Launcher Rule Fired", source:  (2)
+[16888:23824:0622/202910.647:INFO:CONSOLE:2] "KIF-c66597f3-7752-4a26-9b1e-69987139d5e3: Launcher Rule Fired", source:  (2)
+[16888:23824:0622/202910.653:INFO:CONSOLE:2] "KIF-d5d407cb-9e1e-454a-b1f6-7ae14cf3b9e4: Launcher Rule Fired", source:  (2)
+[16888:23824:0622/202910.658:INFO:CONSOLE:2] "KIF-1d1be977-a70b-46a7-b9fd-0cdc192dd6de: Launcher Rule Fired", source:  (2)
+[16888:23824:0622/202910.658:INFO:CONSOLE:2] "KIF M365 Demo 1DS starts", source:  (2)
+[16888:23824:0622/202910.667:INFO:CONSOLE:8] "new condition found", source: https://assets.adobedtm.com/launch-ENc0cbffaf0f8248c3a934a56818d7737e.min.js (8)
+[16888:23824:0622/202913.882:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:5155
+[16888:23824:0622/202913.898:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:265059
+[16888:23824:0622/202914.299:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:883094
+[16888:23824:0622/202914.511:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:2200227
+[16888:23824:0622/202914.520:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:45153
+[16888:23824:0622/202914.727:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:4680
+[16888:23824:0622/202915.027:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:118577
+[16888:23824:0622/202915.059:WARNING:components\download\internal\background_service\controller_impl.cc:1187] Background download complete, client: 6, completion type: 0, file size:2747168
+[8776:3820:0622/202923.874:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
+[8776:3820:0622/202923.874:WARNING:net\extras\sqlite\sqlite_persistent_store_backend_base.cc:176] Failed to post task from FlushAndNotifyInBackground@net\extras\sqlite\sqlite_persistent_store_backend_base.cc:226 to client_task_runner_.
