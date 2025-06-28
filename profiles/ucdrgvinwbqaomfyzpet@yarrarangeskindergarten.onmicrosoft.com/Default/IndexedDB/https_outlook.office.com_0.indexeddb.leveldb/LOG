@@ -1,0 +1,6 @@
+2025/06/28-02:49:24.522 360 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/28-02:49:24.523 360 Recovering log #35
+2025/06/28-02:49:24.524 360 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000035.log 
+2025/06/28-02:49:24.525 360 Delete type=2 #34
+2025/06/28-02:49:24.532 5910 Manual compaction at level-0 from '\x00\x11\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x12\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/28-02:49:25.292 2134 Manual compaction at level-0 from '\x00\x12\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x13\x00\x00\x00' @ 0 : 0; will stop at (end)

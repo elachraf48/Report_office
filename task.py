@@ -35,67 +35,87 @@ def show_tasks():
 
 
 # ========== TASK IMPLEMENTATIONS ==========
-
-
-def login_if_needed(profile_name, email, password):
-    profile_path = os.path.join(PROFILE_DIR, profile_name)
+def login_if_needed(email, password):
+    profile_path = os.path.join(PROFILE_DIR, email)
 
     options = Options()
     options.add_argument(f"--user-data-dir={os.path.abspath(profile_path)}")
     options.add_argument("--start-maximized")
     options.add_argument("--disable-blink-features=AutomationControlled")
 
-    driver = webdriver.Chrome(service=Service(CHROMEDRIVER_PATH), options=options)
-    driver.get("https://outlook.office.com/mail/")
-    time.sleep(5)
+    try:
+        driver = webdriver.Chrome(service=Service(CHROMEDRIVER_PATH), options=options)
+        driver.get("https://outlook.office.com/mail/")
+        time.sleep(5)
 
-    # If login page detected, login
-    if "login.microsoftonline.com" in driver.current_url or "www.microsoft.com" in driver.current_url:
-        print(f"[!] Profile {profile_name} is not logged in. Logging in now...")
-        try:
+        if "login.microsoftonline.com" in driver.current_url or "www.microsoft.com" in driver.current_url:
+            print(f"[!] Profile {email} is not logged in. Logging in now...")
+
             driver.get(LOGIN_URL)
             time.sleep(3)
 
-            email_input = driver.find_element(By.NAME, "loginfmt")
-            email_input.clear()
-            email_input.send_keys(email)
-            email_input.send_keys(Keys.ENTER)
-            time.sleep(3)
+            # ✅ Handle "Choose an account" screen
+            try:
+                account_list = driver.find_elements(By.CSS_SELECTOR, '[data-test-id="accountTile"]')
+                matched = False
+                for account in account_list:
+                    if email in account.text:
+                        account.click()
+                        matched = True
+                        print(f"[✓] Selected existing account: {email}")
+                        break
 
-            password_input = driver.find_element(By.NAME, "passwd")
-            password_input.clear()
-            password_input.send_keys(password)
-            password_input.send_keys(Keys.ENTER)
-            time.sleep(3)
+                if not matched:
+                    print("[~] Email not listed, selecting 'Use another account'")
+                    other_account = driver.find_element(By.XPATH, "//div[contains(text(), 'Utiliser un autre compte')]")
+                    other_account.click()
+                    time.sleep(2)
+
+            except Exception as e:
+                print("[~] No account selection screen, proceeding directly")
+
+            # ✅ Now do login steps
+            try:
+                email_input = driver.find_element(By.NAME, "loginfmt")
+                email_input.clear()
+                email_input.send_keys(email)
+                email_input.send_keys(Keys.ENTER)
+                time.sleep(3)
+            except:
+                pass  # Already selected
 
             try:
-                driver.find_element(By.ID, "idBtn_Back").click()
+                password_input = driver.find_element(By.NAME, "passwd")
+                password_input.clear()
+                password_input.send_keys(password)
+                password_input.send_keys(Keys.ENTER)
+                time.sleep(3)
+            except:
+                print("[~] Password input not found, maybe already authenticated")
+
+            try:
+                driver.find_element(By.ID, "idBtn_Back").click()  # No button
             except:
                 pass
 
             time.sleep(5)
             print(f"[+] Login success: {email}")
-            
 
-        except Exception as e:
-            print(f"[!] Error in {profile_name}: {e}")
-            try:
-                timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                screenshot_path = os.path.join(ERRORS_DIR, f"{profile_name}_{timestamp}.png")
-                driver.save_screenshot(screenshot_path)
-                print(f"[!] Screenshot saved: {screenshot_path}")
-            except:
-                print("[!] Failed to save screenshot.")
-            if 'driver' in locals():
-                driver.quit()
-        time.sleep(3)
+        return driver
 
-        # # reopen after login
-        # driver = webdriver.Chrome(service=Service(CHROMEDRIVER_PATH), options=options)
-        # driver.get("https://outlook.office.com/mail/")
-        # time.sleep(5)
-
-    return driver
+    except Exception as e:
+        print(f"[!] Error during login for {email}: {e}")
+        try:
+            timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+            safe_email = email.replace('@', '_at_').replace('.', '_')
+            screenshot_path = os.path.join(ERRORS_DIR, f"{safe_email}_{timestamp}.png")
+            driver.save_screenshot(screenshot_path)
+            print(f"[!] Screenshot saved: {screenshot_path}")
+        except:
+            print("[!] Failed to save screenshot.")
+        if 'driver' in locals():
+            driver.quit()
+        return None
 
 
 # task functions (same as you have)

@@ -11,8 +11,8 @@ ERRORS_DIR = 'errors'
 LOGIN_URL = 'https://login.microsoftonline.com/'
 
 
-def create_and_login(profile_name, email, password):
-    profile_path = os.path.join(PROFILE_DIR, profile_name)
+def create_and_login(email, password):
+    profile_path = os.path.join(PROFILE_DIR, email)
 
     options = uc.ChromeOptions()
     options.add_argument(f"--user-data-dir={os.path.abspath(profile_path)}")
@@ -37,7 +37,7 @@ def create_and_login(profile_name, email, password):
         time.sleep(3)
 
         try:
-            driver.find_element(By.ID, "idBtn_Back").click()
+            driver.find_element(By.ID, "idBtn_Back").click()  # "Stay signed in?" prompt
         except:
             pass
 
@@ -46,10 +46,11 @@ def create_and_login(profile_name, email, password):
         driver.quit()
 
     except Exception as e:
-        print(f"[!] Error in {profile_name}: {e}")
+        print(f"[!] Error during login for {email}: {e}")
         try:
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-            screenshot_path = os.path.join(ERRORS_DIR, f"{profile_name}_{timestamp}.png")
+            safe_email = email.replace('@', '_at_').replace('.', '_')  # make safe filename
+            screenshot_path = os.path.join(ERRORS_DIR, f"{safe_email}_{timestamp}.png")
             driver.save_screenshot(screenshot_path)
             print(f"[!] Screenshot saved: {screenshot_path}")
         except:

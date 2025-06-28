@@ -26,44 +26,19 @@ def get_next_profile_number():
     numbers = [int(d.replace("office", "")) for d in profiles if d.replace("office", "").isdigit()]
     return max(numbers + [0]) + 1
 
-
 def load_accounts():
     with open(DATA_FILE, 'r') as f:
         lines = [line.strip() for line in f if ':' in line]
 
     accounts = []
-    updated_lines = []
-    current_number = get_next_profile_number()
-
     for line in lines:
         parts = line.split(':')
-        if len(parts) == 1:
+        if len(parts) == 2:
             email, password = parts
-            # Check if any profile already uses this email
-            matching_profile = None
-            for folder in os.listdir(PROFILE_DIR):
-                if folder.startswith("office"):
-                    folder_path = os.path.join(PROFILE_DIR, folder)
-                    # optional: check if folder/email mapping is already saved somewhere
-                    pass
-            profile_name = f"office{current_number}"
-            current_number += 1
-            accounts.append((profile_name, email, password))
-            updated_lines.append(f"{profile_name}:{email}:{password}")
-        elif len(parts) == 3:
-            profile_name, email, password = parts
-            accounts.append((profile_name, email, password))
-            updated_lines.append(line)
+            accounts.append((email, password))
         else:
-            print(f"[!] Skipping invalid line in data.txt: {line}")
-
-    if lines != updated_lines:
-        with open(DATA_FILE, 'w') as f:
-            f.write('\n'.join(updated_lines))
-        print("[✓] data.txt updated with missing profile names")
-
+            print(f"[!] Skipping invalid line: {line}")
     return accounts
-
 
 
 
@@ -72,7 +47,6 @@ def start_tasks():
     selected_tasks = show_tasks()
 
     start_input = input("Start from which account? (press Enter to start from 1): ").strip()
-
     if start_input == "":
         start_idx = 0
         end_idx = len(accounts)
@@ -86,38 +60,39 @@ def start_tasks():
             start_idx = 0
             end_idx = len(accounts)
 
-    for i, (profile_name, email, password) in enumerate(accounts[start_idx:end_idx], start=start_idx + 1):
-        print(f"\n[→] Working on profile {i}: {profile_name}")
-        profile_path = os.path.join(PROFILE_DIR, profile_name)
+    for i, (email, password) in enumerate(accounts[start_idx:end_idx], start=start_idx + 1):
+        print(f"\n[→] Working on {email}")
+        profile_path = os.path.join(PROFILE_DIR, email)
 
         if not os.path.exists(profile_path):
-            print(f"[+] Creating and logging in: {profile_name}")
-            create_and_login(profile_name, email, password)
+            print(f"[+] Creating login session for {email}")
+            create_and_login(email, password)
         else:
-            print(f"[✓] Profile exists: {profile_name}")
+            print(f"[✓] Profile already exists for {email}")
 
-        # Try to open Chrome, check if login needed, then run tasks
-        driver = login_if_needed(profile_name, email, password)
-        if driver:
-            perform_tasks(driver, profile_name, selected_tasks)
-
+        driver = login_if_needed(email, password)
+        if driver is None:
+            print(f"[X] Skipping {email} due to login failure.")
+            continue  # move to next profile
+        perform_tasks(driver, email, selected_tasks)
 
 
 def main():
     print("=== MAIN MENU ===")
-    print("1. Create profile(s)")
-    print("2. Start repo (task runner)")
-    choice = input("Enter your choice (1 or 2): ")
+    print("1. Create profiles only")
+    print("2. Start tasks")
+    choice = input("Enter your choice (1 or 2): ").strip()
 
-    if choice == '1':
+    if choice == "1":
         accounts = load_accounts()
-        for profile_name, email, password in accounts:
-            if not os.path.exists(os.path.join(PROFILE_DIR, profile_name)):
-                print(f"[~] Creating: {profile_name}")
-                create_and_login(profile_name, email, password)
+        for email, password in accounts:
+            profile_path = os.path.join(PROFILE_DIR, email)
+            if not os.path.exists(profile_path):
+                print(f"[~] Creating profile for {email}")
+                create_and_login(email, password)
             else:
-                print(f"[✓] Already exists: {profile_name}")
-    elif choice == '2':
+                print(f"[✓] Profile exists for {email}")
+    elif choice == "2":
         start_tasks()
     else:
         print("[!] Invalid choice")
