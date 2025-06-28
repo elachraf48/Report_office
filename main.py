@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import undetected_chromedriver as uc
 
-from task import show_tasks, perform_tasks
+from task import show_tasks, perform_tasks, login_if_needed
 from auth import create_and_login
 
 # === CONFIG ===
@@ -17,11 +17,9 @@ ERRORS_DIR = 'errors'
 CHROMEDRIVER_PATH = './drive/chromedriver.exe'
 LOGIN_URL = 'https://login.microsoftonline.com/'
 
-
 # === Ensure necessary folders exist ===
 os.makedirs(PROFILE_DIR, exist_ok=True)
 os.makedirs(ERRORS_DIR, exist_ok=True)
-
 
 def get_next_profile_number():
     profiles = [d for d in os.listdir(PROFILE_DIR) if d.startswith("office")]
@@ -35,14 +33,21 @@ def load_accounts():
 
     accounts = []
     updated_lines = []
-    profile_index = get_next_profile_number()
+    current_number = get_next_profile_number()
 
     for line in lines:
         parts = line.split(':')
-        if len(parts) == 2:
+        if len(parts) == 1:
             email, password = parts
-            profile_name = f"office{profile_index}"
-            profile_index += 1
+            # Check if any profile already uses this email
+            matching_profile = None
+            for folder in os.listdir(PROFILE_DIR):
+                if folder.startswith("office"):
+                    folder_path = os.path.join(PROFILE_DIR, folder)
+                    # optional: check if folder/email mapping is already saved somewhere
+                    pass
+            profile_name = f"office{current_number}"
+            current_number += 1
             accounts.append((profile_name, email, password))
             updated_lines.append(f"{profile_name}:{email}:{password}")
         elif len(parts) == 3:
@@ -50,12 +55,12 @@ def load_accounts():
             accounts.append((profile_name, email, password))
             updated_lines.append(line)
         else:
-            print(f"[!] Invalid line skipped: {line}")
+            print(f"[!] Skipping invalid line in data.txt: {line}")
 
     if lines != updated_lines:
         with open(DATA_FILE, 'w') as f:
             f.write('\n'.join(updated_lines))
-        print("[✓] Updated data.txt with profile names")
+        print("[✓] data.txt updated with missing profile names")
 
     return accounts
 
@@ -91,7 +96,11 @@ def start_tasks():
         else:
             print(f"[✓] Profile exists: {profile_name}")
 
-        perform_tasks(profile_name, email, password, selected_tasks)
+        # Try to open Chrome, check if login needed, then run tasks
+        driver = login_if_needed(profile_name, email, password)
+        if driver:
+            perform_tasks(driver, profile_name, selected_tasks)
+
 
 
 def main():
