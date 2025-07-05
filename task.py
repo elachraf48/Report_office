@@ -10,7 +10,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from auth import create_and_login
 import datetime
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 CHROMEDRIVER_PATH = './drive/chromedriver.exe'
 WHITELIST_FILE = 'data/whitelist.txt'
 ERRORS_DIR = 'errors'
@@ -132,31 +133,51 @@ def task_open_junk(driver):
     except Exception as e:
         print(f"[!] Failed to open junk folder: {e}")
 
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 def task_report_not_junk(driver):
     print("🚫 Trying to report as not junk...")
 
     try:
         driver.get("https://outlook.office.com/mail/junkemail")
-        time.sleep(7)
+        WebDriverWait(driver, 15).until(
+            EC.presence_of_element_located((By.XPATH, '//div[@aria-label="Message list"]'))
+        )
+        time.sleep(3)
 
-        # Find the email list container
-        emails = driver.find_elements(By.CSS_SELECTOR, '[aria-label="Message list"] [tabindex]')
+        # Get list of junk emails
+        emails = driver.find_elements(By.XPATH, '//div[@aria-label="Message list"]//div[@role="option"]')
 
         if not emails:
             print("📭 No emails found in Junk folder.")
             return
 
-        # Click the first email
-        emails[0].click()
+        print(f"[✓] Found {len(emails)} email(s) in junk.")
+
+        first_email = emails[0]
+        first_email_text = first_email.text.strip()
+
+        first_email.click()
+        print("📨 Opened first junk email")
         time.sleep(6)
 
-        # Try to find and click the 'Not junk' button
-        not_junk_button = driver.find_element(By.XPATH, '//button[contains(text(),"Not junk")]')
-        not_junk_button.click()
-        print("✅ Marked as not junk")
+        # After clicking, go back to junk folder and check if email disappeared
+        driver.get("https://outlook.office.com/mail/junkemail")
+        time.sleep(5)
+
+        new_emails = driver.find_elements(By.XPATH, '//div[@aria-label="Message list"]//div[@role="option"]')
+        email_titles = [e.text.strip() for e in new_emails]
+
+        if first_email_text not in email_titles:
+            print("✅ Email marked as not junk (automatically moved)")
+        else:
+            print("⚠️ Email still in junk — no automatic move detected")
 
     except Exception as e:
-        print(f"[!] Failed to report not junk: {e}")
+        print(f"[!] Error while reporting not junk: {e}")
+
+
 
 
 
