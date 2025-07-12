@@ -1,3 +1,16 @@
-2025/06/28-03:32:10.447 13b8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\gzfwxdvliumcenpbksjh@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/MANIFEST-000001
-2025/06/28-03:32:10.459 13b8 Recovering log #7
-2025/06/28-03:32:10.462 13b8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\gzfwxdvliumcenpbksjh@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/000007.log 
+2025/07/12-19:30:13.215 39d8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\gzfwxdvliumcenpbksjh@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/12-19:30:13.219 39d8 Recovering log #20
+2025/07/12-19:30:13.219 39d8 Level-0 table #23: started
+2025/07/12-19:30:13.221 39d8 Level-0 table #23: 43406 bytes OK
+2025/07/12-19:30:13.221 39d8 Recovering log #22
+2025/07/12-19:30:13.223 39d8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\gzfwxdvliumcenpbksjh@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/000022.log 
+2025/07/12-19:30:13.223 39d8 Delete type=0 #20
+2025/07/12-19:30:13.224 5ec0 Compacting 4@0 + 1@1 files
+2025/07/12-19:30:13.230 5ec0 Generated table #24@0: 163 keys, 222660 bytes
+2025/07/12-19:30:13.231 5ec0 Compacted 4@0 + 1@1 files => 222660 bytes
+2025/07/12-19:30:13.231 5ec0 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/07/12-19:30:13.232 5ec0 Delete type=2 #13
+2025/07/12-19:30:13.232 5ec0 Delete type=2 #16
+2025/07/12-19:30:13.232 5ec0 Delete type=2 #18
+2025/07/12-19:30:13.232 5ec0 Delete type=2 #21
+2025/07/12-19:30:13.232 5ec0 Delete type=2 #23

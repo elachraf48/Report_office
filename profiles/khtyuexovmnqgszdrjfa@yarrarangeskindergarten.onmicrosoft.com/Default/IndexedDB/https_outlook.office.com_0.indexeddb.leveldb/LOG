@@ -1,15 +1,15 @@
-2025/07/05-19:40:30.996 7140 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/07/05-19:40:30.997 7140 Recovering log #98
-2025/07/05-19:40:30.997 7140 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000098.log 
-2025/07/05-19:40:30.997 7140 Delete type=2 #96
-2025/07/05-19:40:31.005 5194 Level-0 table #103: started
-2025/07/05-19:40:31.008 5194 Level-0 table #103: 780 bytes OK
-2025/07/05-19:40:31.009 5194 Delete type=0 #98
-2025/07/05-19:40:31.010 4768 Manual compaction at level-0 from '\x00,\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at '\x00,\x00\x00\x05' @ 781 : 1
-2025/07/05-19:40:31.011 4768 Compacting 1@0 + 1@1 files
-2025/07/05-19:40:31.014 4768 Generated table #104@0: 12 keys, 563 bytes
-2025/07/05-19:40:31.015 4768 Compacted 1@0 + 1@1 files => 563 bytes
-2025/07/05-19:40:31.016 4768 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/07/05-19:40:31.017 4768 Delete type=2 #103
-2025/07/05-19:40:31.018 c68 Manual compaction at level-0 from '\x00,\x00\x00\x05' @ 781 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/07/05-19:40:32.031 61f0 Manual compaction at level-0 from '\x00-\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00.\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/12-19:32:47.916 3a60 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/12-19:32:47.916 3a60 Recovering log #412
+2025/07/12-19:32:47.916 3a60 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000412.log 
+2025/07/12-19:32:47.916 3a60 Delete type=2 #411
+2025/07/12-19:32:47.919 3a60 Manual compaction at level-0 from '\x00\xb1\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\xb2\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/12-19:32:48.176 554c Level-0 table #417: started
+2025/07/12-19:32:48.178 554c Level-0 table #417: 795 bytes OK
+2025/07/12-19:32:48.178 554c Delete type=0 #412
+2025/07/12-19:32:48.179 3a60 Manual compaction at level-0 from '\x00\xb2\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\xb3\x00\x00\x00' @ 0 : 0; will stop at '\x00\xb2\x00\x00\x05' @ 3470 : 1
+2025/07/12-19:32:48.179 3a60 Compacting 1@0 + 1@1 files
+2025/07/12-19:32:48.180 3a60 Generated table #418@0: 79 keys, 1861 bytes
+2025/07/12-19:32:48.180 3a60 Compacted 1@0 + 1@1 files => 1861 bytes
+2025/07/12-19:32:48.180 3a60 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/12-19:32:48.181 3a60 Delete type=2 #417
+2025/07/12-19:32:48.181 3a60 Manual compaction at level-0 from '\x00\xb2\x00\x00\x05' @ 3470 : 1 .. '\x00\xb3\x00\x00\x00' @ 0 : 0; will stop at (end)
