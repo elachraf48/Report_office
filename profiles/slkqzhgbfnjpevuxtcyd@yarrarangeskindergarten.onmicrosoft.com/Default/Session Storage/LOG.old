@@ -1,5 +1,10 @@
-2025/06/28-03:36:50.212 6cdc Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
-2025/06/28-03:36:50.214 6cdc Recovering log #13
-2025/06/28-03:36:50.215 6cdc Level-0 table #16: started
-2025/06/28-03:36:50.268 6cdc Level-0 table #16: 37876 bytes OK
-2025/06/28-03:36:50.274 6cdc Delete type=0 #13
+2025/07/05-19:19:13.884 87cc Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
+2025/07/05-19:19:13.886 87cc Recovering log #19
+2025/07/05-19:19:13.888 87cc Level-0 table #22: started
+2025/07/05-19:19:13.897 87cc Level-0 table #22: 36639 bytes OK
+2025/07/05-19:19:13.898 87cc Recovering log #22
+2025/07/05-19:19:13.901 87cc Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/000022.log 
+2025/07/05-19:19:13.907 87cc Delete type=0 #19
+2025/07/05-19:19:13.907 87cc Delete type=2 #23
+2025/07/05-19:19:40.930 1fe0 Level-0 table #24: started
+2025/07/05-19:19:40.970 1fe0 Level-0 table #24: 37877 bytes OK

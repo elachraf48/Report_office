@@ -1,15 +1,15 @@
-2025/06/28-03:45:32.707 1b80 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/28-03:45:32.708 1b80 Recovering log #59
-2025/06/28-03:45:32.708 1b80 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000059.log 
-2025/06/28-03:45:32.709 1b80 Delete type=2 #58
-2025/06/28-03:45:32.756 68b0 Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/06/28-03:45:33.629 6628 Level-0 table #64: started
-2025/06/28-03:45:33.635 6628 Level-0 table #64: 791 bytes OK
-2025/06/28-03:45:33.637 6628 Delete type=0 #59
-2025/06/28-03:45:33.637 1b80 Manual compaction at level-0 from '\x00\x1c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x00\x00\x05' @ 493 : 1
-2025/06/28-03:45:33.637 1b80 Compacting 1@0 + 1@1 files
-2025/06/28-03:45:33.639 1b80 Generated table #65@0: 12 keys, 553 bytes
-2025/06/28-03:45:33.640 1b80 Compacted 1@0 + 1@1 files => 553 bytes
-2025/06/28-03:45:33.640 1b80 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/06/28-03:45:33.641 1b80 Delete type=2 #64
-2025/06/28-03:45:33.641 1b80 Manual compaction at level-0 from '\x00\x1c\x00\x00\x05' @ 493 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/05-19:40:30.996 7140 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/05-19:40:30.997 7140 Recovering log #98
+2025/07/05-19:40:30.997 7140 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\khtyuexovmnqgszdrjfa@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000098.log 
+2025/07/05-19:40:30.997 7140 Delete type=2 #96
+2025/07/05-19:40:31.005 5194 Level-0 table #103: started
+2025/07/05-19:40:31.008 5194 Level-0 table #103: 780 bytes OK
+2025/07/05-19:40:31.009 5194 Delete type=0 #98
+2025/07/05-19:40:31.010 4768 Manual compaction at level-0 from '\x00,\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at '\x00,\x00\x00\x05' @ 781 : 1
+2025/07/05-19:40:31.011 4768 Compacting 1@0 + 1@1 files
+2025/07/05-19:40:31.014 4768 Generated table #104@0: 12 keys, 563 bytes
+2025/07/05-19:40:31.015 4768 Compacted 1@0 + 1@1 files => 563 bytes
+2025/07/05-19:40:31.016 4768 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/05-19:40:31.017 4768 Delete type=2 #103
+2025/07/05-19:40:31.018 c68 Manual compaction at level-0 from '\x00,\x00\x00\x05' @ 781 : 1 .. '\x00-\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/05-19:40:32.031 61f0 Manual compaction at level-0 from '\x00-\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00.\x00\x00\x00' @ 0 : 0; will stop at (end)

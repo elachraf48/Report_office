@@ -1,14 +1,25 @@
-2025/06/28-03:41:32.929 4b10 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/28-03:41:32.930 4b10 Recovering log #85
-2025/06/28-03:41:32.930 4b10 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000085.log 
-2025/06/28-03:41:32.975 1b88 Manual compaction at level-0 from '\x00"\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00#\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/06/28-03:41:33.839 4b10 Level-0 table #90: started
-2025/06/28-03:41:33.842 4b10 Level-0 table #90: 2313 bytes OK
-2025/06/28-03:41:33.844 4b10 Delete type=0 #85
-2025/06/28-03:41:33.845 4b10 Manual compaction at level-0 from '\x00#\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00$\x00\x00\x00' @ 0 : 0; will stop at '\x00#\x00\x00\x05' @ 671 : 1
-2025/06/28-03:41:33.845 4b10 Compacting 1@0 + 1@1 files
-2025/06/28-03:41:33.847 4b10 Generated table #91@0: 54 keys, 1428 bytes
-2025/06/28-03:41:33.847 4b10 Compacted 1@0 + 1@1 files => 1428 bytes
-2025/06/28-03:41:33.848 4b10 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/06/28-03:41:33.849 4b10 Delete type=2 #90
-2025/06/28-03:41:33.849 4b10 Manual compaction at level-0 from '\x00#\x00\x00\x05' @ 671 : 1 .. '\x00$\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/05-19:40:51.369 2fcc Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/05-19:40:51.370 2fcc Recovering log #112
+2025/07/05-19:40:51.370 2fcc Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000112.log 
+2025/07/05-19:40:51.371 2fcc Delete type=2 #111
+2025/07/05-19:40:51.417 2fcc Level-0 table #117: started
+2025/07/05-19:40:51.420 2fcc Level-0 table #117: 547 bytes OK
+2025/07/05-19:40:51.421 2fcc Delete type=0 #112
+2025/07/05-19:40:51.422 4bc4 Manual compaction at level-0 from '\x000\x00\x00\x00' @ 72057594037927935 : 1 .. '\x001\x00\x00\x00' @ 0 : 0; will stop at '\x000\x00\x00\x05' @ 905 : 1
+2025/07/05-19:40:51.424 4bc4 Compacting 1@0 + 1@1 files
+2025/07/05-19:40:51.427 4bc4 Generated table #118@0: 54 keys, 1433 bytes
+2025/07/05-19:40:51.427 4bc4 Compacted 1@0 + 1@1 files => 1433 bytes
+2025/07/05-19:40:51.429 4bc4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/05-19:40:51.430 4bc4 Delete type=2 #117
+2025/07/05-19:40:51.431 2fcc Manual compaction at level-0 from '\x000\x00\x00\x05' @ 905 : 1 .. '\x001\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/05-19:40:52.367 2fcc Level-0 table #120: started
+2025/07/05-19:40:52.370 2fcc Level-0 table #120: 535 bytes OK
+2025/07/05-19:40:52.372 2fcc Delete type=2 #114
+2025/07/05-19:40:52.372 2fcc Delete type=0 #116
+2025/07/05-19:40:52.374 2fcc Manual compaction at level-0 from '\x001\x00\x00\x00' @ 72057594037927935 : 1 .. '\x002\x00\x00\x00' @ 0 : 0; will stop at '\x001\x00\x00\x05' @ 923 : 1
+2025/07/05-19:40:52.374 2fcc Compacting 1@0 + 1@1 files
+2025/07/05-19:40:52.377 2fcc Generated table #121@0: 54 keys, 1433 bytes
+2025/07/05-19:40:52.377 2fcc Compacted 1@0 + 1@1 files => 1433 bytes
+2025/07/05-19:40:52.378 2fcc compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/05-19:40:52.379 2fcc Delete type=2 #120
+2025/07/05-19:40:52.380 2fcc Manual compaction at level-0 from '\x001\x00\x00\x05' @ 923 : 1 .. '\x002\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,5 +1,3 @@
-data/
-errors/
-_pycache/
-driver/
-profiles/
+data/*
+errors/*
+profiles/*

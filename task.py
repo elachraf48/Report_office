@@ -137,15 +137,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 def task_report_not_junk(driver):
-    print("🚫 Trying to report as not junk...")
+        print("🚫 Trying to report as not junk...")
 
-    try:
+    # try:
         driver.get("https://outlook.office.com/mail/junkemail")
         WebDriverWait(driver, 15).until(
             EC.presence_of_element_located((By.XPATH, '//div[@aria-label="Message list"]'))
         )
         time.sleep(3)
-
+        if "junkemail" not in driver.current_url:
+            print("[!] Failed to open junk folder, trying again...")
+            driver.get("https://outlook.office.com/mail/junkemail")
+            time.sleep(5)
         # Get list of junk emails
         emails = driver.find_elements(By.XPATH, '//div[@aria-label="Message list"]//div[@role="option"]')
 
@@ -159,6 +162,9 @@ def task_report_not_junk(driver):
         first_email_text = first_email.text.strip()
 
         first_email.click()
+        driver.execute_script("arguments[0].scrollIntoView(true);", first_email)
+        time.sleep(1)
+        driver.execute_script("arguments[0].click();", first_email)
         print("📨 Opened first junk email")
         time.sleep(6)
 
@@ -174,8 +180,8 @@ def task_report_not_junk(driver):
         else:
             print("⚠️ Email still in junk — no automatic move detected")
 
-    except Exception as e:
-        print(f"[!] Error while reporting not junk: {e}")
+    # except Exception as e:
+    #     print(f"[!] Error while reporting not junk: {e}")
 
 
 

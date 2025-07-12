@@ -1,3 +1,18 @@
-2025/06/28-03:41:32.015 77e8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
-2025/06/28-03:41:32.017 77e8 Recovering log #17
-2025/06/28-03:41:32.025 77e8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/000017.log 
+2025/07/05-19:40:38.620 6e74 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
+2025/07/05-19:40:38.622 6e74 Recovering log #22
+2025/07/05-19:40:38.624 6e74 Level-0 table #24: started
+2025/07/05-19:40:38.631 6e74 Level-0 table #24: 37877 bytes OK
+2025/07/05-19:40:38.633 6e74 Recovering log #23
+2025/07/05-19:40:38.639 6e74 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/000023.log 
+2025/07/05-19:40:38.642 6e74 Delete type=0 #22
+2025/07/05-19:40:38.643 6f6c Compacting 4@0 + 1@1 files
+2025/07/05-19:40:38.660 6f6c Generated table #25@0: 159 keys, 229190 bytes
+2025/07/05-19:40:38.661 6f6c Compacted 4@0 + 1@1 files => 229190 bytes
+2025/07/05-19:40:38.662 6f6c compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/07/05-19:40:38.663 6f6c Delete type=2 #14
+2025/07/05-19:40:38.664 6f6c Delete type=2 #16
+2025/07/05-19:40:38.664 6f6c Delete type=2 #20
+2025/07/05-19:40:38.664 6f6c Delete type=2 #22
+2025/07/05-19:40:38.664 6f6c Delete type=2 #24
+2025/07/05-19:41:03.918 3e44 Level-0 table #27: started
+2025/07/05-19:41:03.936 3e44 Level-0 table #27: 30402 bytes OK
