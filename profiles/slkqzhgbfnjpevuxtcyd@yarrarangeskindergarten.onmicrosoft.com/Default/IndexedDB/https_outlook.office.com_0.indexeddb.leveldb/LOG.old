@@ -1,4 +1,14 @@
-2025/06/28-03:37:23.096 6da8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/28-03:37:23.097 6da8 Recovering log #85
-2025/06/28-03:37:23.097 6da8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000085.log 
-2025/06/28-03:37:23.098 6da8 Delete type=2 #83
+2025/07/12-19:32:58.520 46e0 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/07/12-19:32:58.521 46e0 Recovering log #334
+2025/07/12-19:32:58.521 46e0 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000334.log 
+2025/07/12-19:32:58.523 19d4 Level-0 table #339: started
+2025/07/12-19:32:58.524 19d4 Level-0 table #339: 1228 bytes OK
+2025/07/12-19:32:58.525 19d4 Delete type=0 #334
+2025/07/12-19:32:58.525 19d4 Manual compaction at level-0 from '\x00\x84\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x85\x00\x00\x00' @ 0 : 0; will stop at '\x00\x84\x00\x00\x05' @ 2672 : 1
+2025/07/12-19:32:58.525 19d4 Compacting 1@0 + 1@1 files
+2025/07/12-19:32:58.526 19d4 Generated table #340@0: 73 keys, 1974 bytes
+2025/07/12-19:32:58.526 19d4 Compacted 1@0 + 1@1 files => 1974 bytes
+2025/07/12-19:32:58.526 19d4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/07/12-19:32:58.527 19d4 Delete type=2 #339
+2025/07/12-19:32:58.527 46e0 Manual compaction at level-0 from '\x00\x84\x00\x00\x05' @ 2672 : 1 .. '\x00\x85\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/07/12-19:32:58.963 2234 Manual compaction at level-0 from '\x00\x85\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x86\x00\x00\x00' @ 0 : 0; will stop at (end)

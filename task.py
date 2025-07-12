@@ -12,6 +12,11 @@ from auth import create_and_login
 import datetime
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains    
+import traceback
+
+# ========== CONFIGURATION ==========
+
 CHROMEDRIVER_PATH = './drive/chromedriver.exe'
 WHITELIST_FILE = 'data/whitelist.txt'
 ERRORS_DIR = 'errors'
@@ -132,54 +137,169 @@ def task_open_junk(driver):
         time.sleep(50)  # Wait for junk folder to load
     except Exception as e:
         print(f"[!] Failed to open junk folder: {e}")
-
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 def task_report_not_junk(driver):
-    print("🚫 Trying to report as not junk...")
-
+    print("🚫 Starting not junk reporting process...")
+    
     try:
-        driver.get("https://outlook.office.com/mail/junkemail")
-        WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.XPATH, '//div[@aria-label="Message list"]'))
-        )
+        # Navigate to junk folder with multiple retries
+        print("🌐 Navigating to junk folder...")
+        max_retries = 3
+        for attempt in range(max_retries):
+            try:
+                driver.get("https://outlook.office.com/mail/junkemail")
+                WebDriverWait(driver, 15).until(
+                    lambda d: "junkemail" in d.current_url
+                )
+                break
+            except Exception as e:
+                if attempt == max_retries - 1:
+                    print(f"⚠️ Failed to load junk folder after {max_retries} attempts: {e}")
+                    raise
+                print(f"🔄 Retrying junk folder loading ({attempt + 1}/{max_retries})...")
+                time.sleep(2)
+
+        # Wait for page to stabilize
         time.sleep(3)
 
-        # Get list of junk emails
-        emails = driver.find_elements(By.XPATH, '//div[@aria-label="Message list"]//div[@role="option"]')
+        # Process all emails in a loop
+        processed_count = 0
+        while True:
+            # Check for empty folder
+            empty_indicators = [
+                '//*[contains(text(), "aucun message") or contains(text(), "no messages") or contains(text(), "vide")]',
+                '//*[contains(text(), "folder is empty")]',
+                '//*[contains(@data-automation-id, "emptyFolder")]',
+                '//div[contains(@class, "emptyFolder")]'
+            ]
 
-        if not emails:
-            print("📭 No emails found in Junk folder.")
-            return
+            empty_folder = False
+            for indicator in empty_indicators:
+                try:
+                    empty_elements = driver.find_elements(By.XPATH, indicator)
+                    if empty_elements and empty_elements[0].is_displayed():
+                        print("📭 Junk folder appears to be empty")
+                        empty_folder = True
+                        break
+                except Exception:
+                    continue
+            
+            if empty_folder:
+                break
 
-        print(f"[✓] Found {len(emails)} email(s) in junk.")
+            # Find emails
+            email_locators = [
+                '//div[@aria-label="Message list"]//div[@role="option"][.//div[@data-automationid="messageListItem"]]',
+                '//div[@aria-label="Message list"]//div[contains(@class, "ListItem") and @role="option"]',
+                '//div[@data-convid][@role="option"]',
+                '//div[contains(@class, "ms-List-cell")][@role="option"]'
+            ]
 
-        first_email = emails[0]
-        first_email_text = first_email.text.strip()
+            emails = []
+            for locator in email_locators:
+                try:
+                    emails = driver.find_elements(By.XPATH, locator)
+                    if emails:
+                        break
+                except Exception:
+                    continue
 
-        first_email.click()
-        print("📨 Opened first junk email")
-        time.sleep(6)
+            if not emails:
+                print("🔍 No emails detected - trying scroll and refresh...")
+                try:
+                    driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
+                    time.sleep(2)
+                    refresh_button = driver.find_element(By.XPATH, '//button[@aria-label="Refresh"]')
+                    refresh_button.click()
+                    time.sleep(3)
+                    continue
+                except Exception:
+                    print("❌ Could not refresh emails list")
+                    break
 
-        # After clicking, go back to junk folder and check if email disappeared
-        driver.get("https://outlook.office.com/mail/junkemail")
-        time.sleep(5)
+            print(f"📨 Found {len(emails)} email(s) in junk folder")
 
-        new_emails = driver.find_elements(By.XPATH, '//div[@aria-label="Message list"]//div[@role="option"]')
-        email_titles = [e.text.strip() for e in new_emails]
+            # Process first email in the list
+            try:
+                first_email = emails[0]
+                driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", first_email)
+                driver.execute_script("arguments[0].style.border='3px solid red';", first_email)
+                time.sleep(1)
+                
+                # Try multiple click methods
+                clicked = False
+                try:
+                    first_email.click()
+                    clicked = True
+                except Exception:
+                    try:
+                        driver.execute_script("arguments[0].click();", first_email)
+                        clicked = True
+                    except Exception:
+                        try:
+                            ActionChains(driver).move_to_element(first_email).pause(0.5).click().perform()
+                            clicked = True
+                        except Exception:
+                            pass
 
-        if first_email_text not in email_titles:
-            print("✅ Email marked as not junk (automatically moved)")
-        else:
-            print("⚠️ Email still in junk — no automatic move detected")
+                if not clicked:
+                    print("❌ Failed to select email")
+                    break
+                    
+                print("✅ Successfully selected email")
+                time.sleep(2)
+
+                # Click Not Junk button
+                not_junk_xpaths = [
+                    '//*[@id="ItemReadingPaneContainer"]/div[2]/div/div[1]/div/div/div[1]/div[3]/div/div/div[3]/button',
+                    '//button[contains(@aria-label, "Not junk")]',
+                    '//button[contains(@aria-label, "Non indésirable")]',
+                    '//button[@name="Not junk"]'
+                ]
+                
+                clicked = False
+                for xpath in not_junk_xpaths:
+                    try:
+                        button = WebDriverWait(driver, 5).until(
+                            EC.element_to_be_clickable((By.XPATH, xpath))
+                        )
+                        driver.execute_script("arguments[0].click();", button)
+                        print(f"✅ Clicked Not Junk ({xpath[:30]}...)")
+                        clicked = True
+                        break
+                    except Exception:
+                        continue
+
+                if not clicked:
+                    print("❌ Could not find Not Junk button")
+                    break
+
+                # Confirm dialog
+                try:
+                    confirm_button = WebDriverWait(driver, 7).until(
+                        EC.element_to_be_clickable((By.XPATH, '/html/body/div[last()]/div[2]/div/div[3]/button[1]'))
+                    )
+                    driver.execute_script("arguments[0].click();", confirm_button)
+                    print("✅ Email marked as not junk")
+                    processed_count += 1
+                except Exception as e:
+                    print(f"⚠️ Confirmation failed: {e}")
+
+                # Short delay before next email
+                time.sleep(2)
+
+            except Exception as e:
+                print(f"⚠️ Error processing email: {e}")
+                continue
+
+        print(f"✔️ Process completed. Marked {processed_count} emails as not junk")
+        return True
 
     except Exception as e:
-        print(f"[!] Error while reporting not junk: {e}")
-
-
-
-
+        print(f"❗ Critical error: {str(e)}")
+        traceback.print_exc()
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        driver.save_screenshot(f"errors/junk_report_fail_{timestamp}.png")
+        return False
 
 def task_add_whitelist(driver):
     print("📜 Whitelisting emails (placeholder)")
