@@ -1,25 +1,25 @@
-2025/06/28-02:49:13.688 360 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/28-02:49:13.689 360 Recovering log #28
-2025/06/28-02:49:13.690 360 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000028.log 
-2025/06/28-02:49:13.690 360 Delete type=2 #26
-2025/06/28-02:49:13.737 360 Level-0 table #33: started
-2025/06/28-02:49:13.739 360 Level-0 table #33: 789 bytes OK
-2025/06/28-02:49:13.741 360 Delete type=0 #28
-2025/06/28-02:49:13.742 360 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at '\x00\x0f\x00\x00\x05' @ 259 : 1
-2025/06/28-02:49:13.743 360 Compacting 1@0 + 1@1 files
-2025/06/28-02:49:13.745 360 Generated table #34@0: 12 keys, 560 bytes
-2025/06/28-02:49:13.745 360 Compacted 1@0 + 1@1 files => 560 bytes
-2025/06/28-02:49:13.746 360 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/06/28-02:49:13.747 360 Delete type=2 #33
-2025/06/28-02:49:13.748 360 Manual compaction at level-0 from '\x00\x0f\x00\x00\x05' @ 259 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/06/28-02:49:14.171 360 Level-0 table #36: started
-2025/06/28-02:49:14.172 360 Level-0 table #36: 536 bytes OK
-2025/06/28-02:49:14.173 360 Delete type=2 #30
-2025/06/28-02:49:14.173 360 Delete type=0 #32
-2025/06/28-02:49:14.173 360 Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at '\x00\x10\x00\x00\x05' @ 277 : 1
-2025/06/28-02:49:14.173 360 Compacting 1@0 + 1@1 files
-2025/06/28-02:49:14.175 360 Generated table #37@0: 12 keys, 550 bytes
-2025/06/28-02:49:14.175 360 Compacted 1@0 + 1@1 files => 550 bytes
-2025/06/28-02:49:14.176 360 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/06/28-02:49:14.177 360 Delete type=2 #36
-2025/06/28-02:49:14.177 360 Manual compaction at level-0 from '\x00\x10\x00\x00\x05' @ 277 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/28-03:33:36.350 250c Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/28-03:33:36.350 250c Recovering log #57
+2025/06/28-03:33:36.351 250c Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\ucdrgvinwbqaomfyzpet@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000057.log 
+2025/06/28-03:33:36.351 250c Delete type=2 #55
+2025/06/28-03:33:36.396 250c Level-0 table #62: started
+2025/06/28-03:33:36.398 250c Level-0 table #62: 803 bytes OK
+2025/06/28-03:33:36.399 250c Delete type=0 #57
+2025/06/28-03:33:36.400 250c Manual compaction at level-0 from '\x00\x1b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1b\x00\x00\x05' @ 475 : 1
+2025/06/28-03:33:36.400 250c Compacting 1@0 + 1@1 files
+2025/06/28-03:33:36.402 250c Generated table #63@0: 12 keys, 554 bytes
+2025/06/28-03:33:36.402 250c Compacted 1@0 + 1@1 files => 554 bytes
+2025/06/28-03:33:36.403 250c compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/06/28-03:33:36.404 250c Delete type=2 #62
+2025/06/28-03:33:36.404 250c Manual compaction at level-0 from '\x00\x1b\x00\x00\x05' @ 475 : 1 .. '\x00\x1c\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/28-03:33:37.754 250c Level-0 table #65: started
+2025/06/28-03:33:37.756 250c Level-0 table #65: 537 bytes OK
+2025/06/28-03:33:37.757 250c Delete type=2 #59
+2025/06/28-03:33:37.757 250c Delete type=0 #61
+2025/06/28-03:33:37.758 250c Manual compaction at level-0 from '\x00\x1c\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at '\x00\x1c\x00\x00\x05' @ 493 : 1
+2025/06/28-03:33:37.758 250c Compacting 1@0 + 1@1 files
+2025/06/28-03:33:37.761 250c Generated table #66@0: 12 keys, 552 bytes
+2025/06/28-03:33:37.761 250c Compacted 1@0 + 1@1 files => 552 bytes
+2025/06/28-03:33:37.762 250c compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/06/28-03:33:37.762 250c Delete type=2 #65
+2025/06/28-03:33:37.762 250c Manual compaction at level-0 from '\x00\x1c\x00\x00\x05' @ 493 : 1 .. '\x00\x1d\x00\x00\x00' @ 0 : 0; will stop at (end)

@@ -1,15 +1,4 @@
-2025/06/28-02:48:40.149 7ff8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/06/28-02:48:40.150 7ff8 Recovering log #38
-2025/06/28-02:48:40.150 7ff8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000038.log 
-2025/06/28-02:48:40.151 7ff8 Delete type=2 #37
-2025/06/28-02:48:40.198 7144 Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/06/28-02:48:41.720 49b0 Level-0 table #43: started
-2025/06/28-02:48:41.725 49b0 Level-0 table #43: 807 bytes OK
-2025/06/28-02:48:41.728 49b0 Delete type=0 #38
-2025/06/28-02:48:41.729 49b0 Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at '\x00\x10\x00\x00\x05' @ 277 : 1
-2025/06/28-02:48:41.729 49b0 Compacting 1@0 + 1@1 files
-2025/06/28-02:48:41.733 49b0 Generated table #44@0: 12 keys, 551 bytes
-2025/06/28-02:48:41.733 49b0 Compacted 1@0 + 1@1 files => 551 bytes
-2025/06/28-02:48:41.734 49b0 compacted to: files[ 0 1 1 0 0 0 0 ]
-2025/06/28-02:48:41.735 49b0 Delete type=2 #43
-2025/06/28-02:48:41.736 49b0 Manual compaction at level-0 from '\x00\x10\x00\x00\x05' @ 277 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/28-03:37:23.096 6da8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/28-03:37:23.097 6da8 Recovering log #85
+2025/06/28-03:37:23.097 6da8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\IndexedDB\https_outlook.office.com_0.indexeddb.leveldb/000085.log 
+2025/06/28-03:37:23.098 6da8 Delete type=2 #83
