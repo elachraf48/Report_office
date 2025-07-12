@@ -137,6 +137,7 @@ def task_open_junk(driver):
         time.sleep(50)  # Wait for junk folder to load
     except Exception as e:
         print(f"[!] Failed to open junk folder: {e}")
+
 def task_report_not_junk(driver):
     print("🚫 Starting not junk reporting process...")
     
@@ -272,17 +273,35 @@ def task_report_not_junk(driver):
                 if not clicked:
                     print("❌ Could not find Not Junk button")
                     break
-
+                
+    
+                
+                
                 # Confirm dialog
+                print("🔄 Waiting for confirmation dialog...")
+                # In your email processing loop:
                 try:
-                    confirm_button = WebDriverWait(driver, 7).until(
+                    # Wait for checkbox to appear
+                    checkbox = WebDriverWait(driver, 5).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, ".fui-Checkbox__input")))
+                    
+                    # Scroll to checkbox and click using JavaScript
+                    driver.execute_script("arguments[0].scrollIntoView(); arguments[0].click();", checkbox)
+                    print("✅ Checkbox checked")
+                    
+                    # Click confirm button (using your original XPath)
+                    confirm_button = WebDriverWait(driver, 5).until(
                         EC.element_to_be_clickable((By.XPATH, '/html/body/div[last()]/div[2]/div/div[3]/button[1]'))
                     )
-                    driver.execute_script("arguments[0].click();", confirm_button)
+                    confirm_button.click()
                     print("✅ Email marked as not junk")
-                    processed_count += 1
+                    
                 except Exception as e:
-                    print(f"⚠️ Confirmation failed: {e}")
+                    print(f"⚠️ Confirmation failed no dialog found")
+                    
+
+                processed_count += 1
+                print(f"✔️ Marked as not junk ({processed_count} total)")
 
                 # Short delay before next email
                 time.sleep(2)

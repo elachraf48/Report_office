@@ -1,20 +1,20 @@
-2025/07/12-19:28:50.956 583c Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/MANIFEST-000001
-2025/07/12-19:28:50.962 583c Recovering log #55
-2025/07/12-19:28:50.962 583c Level-0 table #58: started
-2025/07/12-19:28:50.966 583c Level-0 table #58: 43162 bytes OK
-2025/07/12-19:28:50.967 583c Recovering log #58
-2025/07/12-19:28:50.969 583c Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/000058.log 
-2025/07/12-19:28:50.970 583c Delete type=0 #55
-2025/07/12-19:28:50.970 583c Delete type=2 #59
-2025/07/12-19:28:50.971 5a3c Compacting 4@0 + 1@1 files
-2025/07/12-19:28:50.982 5a3c Generated table #59@0: 191 keys, 532170 bytes
-2025/07/12-19:28:50.983 5a3c Compacted 4@0 + 1@1 files => 532170 bytes
-2025/07/12-19:28:50.983 5a3c compacted to: files[ 0 1 0 0 0 0 0 ]
-2025/07/12-19:28:50.984 5a3c Delete type=2 #48
-2025/07/12-19:28:50.984 5a3c Delete type=2 #50
-2025/07/12-19:28:50.984 5a3c Delete type=2 #53
-2025/07/12-19:28:50.984 5a3c Delete type=2 #56
-2025/07/12-19:28:50.984 5a3c Delete type=2 #58
-2025/07/12-19:29:24.448 4d4c Level-0 table #61: started
-2025/07/12-19:29:24.451 4d4c Level-0 table #61: 34493 bytes OK
-2025/07/12-19:29:24.452 4d4c Delete type=0 #58
+2025/07/12-21:48:11.665 70ec Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/MANIFEST-000001
+2025/07/12-21:48:11.670 70ec Recovering log #76
+2025/07/12-21:48:11.670 70ec Level-0 table #79: started
+2025/07/12-21:48:11.675 70ec Level-0 table #79: 36495 bytes OK
+2025/07/12-21:48:11.675 70ec Recovering log #79
+2025/07/12-21:48:11.678 70ec Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Local Storage\leveldb/000079.log 
+2025/07/12-21:48:11.679 70ec Delete type=0 #76
+2025/07/12-21:48:11.679 70ec Delete type=2 #80
+2025/07/12-21:49:11.685 70ec Level-0 table #81: started
+2025/07/12-21:49:11.688 70ec Level-0 table #81: 32731 bytes OK
+2025/07/12-21:49:11.688 70ec Delete type=0 #79
+2025/07/12-21:49:11.689 70ec Compacting 4@0 + 1@1 files
+2025/07/12-21:49:11.694 70ec Generated table #82@0: 192 keys, 532191 bytes
+2025/07/12-21:49:11.694 70ec Compacted 4@0 + 1@1 files => 532191 bytes
+2025/07/12-21:49:11.694 70ec compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/07/12-21:49:11.694 70ec Delete type=2 #71
+2025/07/12-21:49:11.694 70ec Delete type=2 #73
+2025/07/12-21:49:11.694 70ec Delete type=2 #77
+2025/07/12-21:49:11.694 70ec Delete type=2 #79
+2025/07/12-21:49:11.694 70ec Delete type=2 #81

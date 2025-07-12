@@ -1,3 +1,15 @@
-2025/07/12-19:32:57.838 1ba8 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
-2025/07/12-19:32:57.839 1ba8 Recovering log #95
-2025/07/12-19:32:57.841 1ba8 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/000095.log 
+2025/07/12-21:51:31.033 3298 Reusing MANIFEST C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/MANIFEST-000001
+2025/07/12-21:51:31.035 3298 Recovering log #130
+2025/07/12-21:51:31.037 3298 Reusing old log C:\Users\USER\Documents\GitHub\Report_office\profiles\slkqzhgbfnjpevuxtcyd@yarrarangeskindergarten.onmicrosoft.com\Default\Session Storage/000130.log 
+2025/07/12-21:51:58.390 5704 Level-0 table #134: started
+2025/07/12-21:51:58.393 5704 Level-0 table #134: 38106 bytes OK
+2025/07/12-21:51:58.394 5704 Delete type=0 #130
+2025/07/12-21:51:58.395 5704 Compacting 4@0 + 1@1 files
+2025/07/12-21:51:58.413 5704 Generated table #135@0: 513 keys, 957994 bytes
+2025/07/12-21:51:58.413 5704 Compacted 4@0 + 1@1 files => 957994 bytes
+2025/07/12-21:51:58.414 5704 compacted to: files[ 0 1 0 0 0 0 0 ]
+2025/07/12-21:51:58.414 5704 Delete type=2 #123
+2025/07/12-21:51:58.415 5704 Delete type=2 #125
+2025/07/12-21:51:58.415 5704 Delete type=2 #128
+2025/07/12-21:51:58.415 5704 Delete type=2 #131
+2025/07/12-21:51:58.415 5704 Delete type=2 #134
